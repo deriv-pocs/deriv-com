@@ -1,5 +1,5 @@
 project_id: '527472'
-api_token_env: CROWDIN_API_KEY
+api_token: CROWDIN_API_KEY
 preserve_hierarchy: true
 
 files:
