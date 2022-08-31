@@ -4,7 +4,7 @@ name: Download Master Translation
 on: [workflow_dispatch]
         
 jobs:
-    sync-translation:
+    download-translation:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout 🛎️
@@ -16,4 +16,4 @@ jobs:
             - run: npm i -g @crowdin/cli
             - name: Push New Strings & Translations ⬆️
               run:  
-                  crowdin download -b master && crowdin download -b master -l zh-CN
+                  crowdin download -b master && crowdin download -b master -l zh-CN -T ${{ secrets.CROWDIN_API_KEY }}
