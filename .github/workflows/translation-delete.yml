@@ -1,11 +1,8 @@
 name: Delete Translation
 
-on:
-  workflow_run:
-    workflows: ["Pre-delete Translation"]
-    types:
-      - completed
-      
+     
+on: [workflow_dispatch]
+
 jobs:
     delete-translation:
         if: startsWith(github.event.workflow_run.head_branch, 'translation') || startsWith(github.event.workflow_run.head_branch, 'stp')

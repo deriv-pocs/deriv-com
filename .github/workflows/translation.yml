@@ -1,12 +1,6 @@
 name: Release Translation
 
-on:
-    push:
-        tags:
-            - 'translation*'
-        paths-ignore:
-            - '**.md'
-
+on: [workflow_dispatch]
 jobs:
     release-translation:
         runs-on: ubuntu-latest

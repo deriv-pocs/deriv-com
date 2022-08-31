@@ -1,11 +1,7 @@
 name: Release Staging
 
-on:
-  push:
-    branches:
-      - master
-    paths-ignore:
-      - "**.md"
+
+on: [workflow_dispatch]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

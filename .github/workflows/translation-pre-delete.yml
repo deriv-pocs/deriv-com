@@ -1,11 +1,7 @@
 name: Pre-delete Translation
 
-on:
-  pull_request:
-    types: [closed]
-    branches:
-        - 'master*'
-        
+       
+on: [workflow_dispatch]
 jobs:
     check-translation-branch:
         runs-on: ubuntu-latest

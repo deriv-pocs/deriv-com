@@ -1,11 +1,7 @@
 name: Push Translation
 
-on:
-  workflow_run:
-    workflows: ["Pre-push Translation"]
-    types:
-      - completed
-      
+     
+on: [workflow_dispatch]
 jobs:
     push-translation:
         if: startsWith(github.event.workflow_run.head_branch, 'translation') || startsWith(github.event.workflow_run.head_branch, 'stp')

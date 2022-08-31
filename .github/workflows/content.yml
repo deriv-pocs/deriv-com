@@ -1,8 +1,7 @@
 name: Release Academy Content
 
-on:
-   repository_dispatch:
-     types: [publish_academy]
+on: [workflow_dispatch]
+
 env:
     GATSBY_CPU_COUNT: 2
     GATSBY_ENV: production
